@@ -1,0 +1,44 @@
+[
+  {
+    "id": "bingo_castro_friday",
+    "name": "Friday Night Bingo at The Lookout",
+    "category": "bingo",
+    "venue": {
+      "id": "venue_lookout",
+      "name": "The Lookout",
+      "address": "3600 16th St, San Francisco, CA 94114",
+      "neighborhood": "Castro",
+      "phone": "(415) 431-3611",
+      "website": "https://thelookoutsf.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "22:00",
+      "end_time": "23:30",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Drag-hosted bingo with live entertainment, cocktails, and amazing prizes",
+      "price": "$15-20 entry",
+      "specials": [
+        "Bingo card: $5",
+        "Prize pool: $500+",
+        "Drag host entertainment",
+        "Cocktail specials: $7"
+      ],
+      "capacity": 250,
+      "age_requirement": "21+",
+      "featured": true
+    },
+    "contact": {
+      "instagram": "@thelookoutsf"
+    },
+    "ratings": {
+      "google": 4.6,
+      "yelp": 4.5
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  }
+]

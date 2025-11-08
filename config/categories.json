@@ -1,0 +1,98 @@
+{
+  "categories": [
+    {
+      "id": "happy_hour",
+      "name": "Happy Hour",
+      "description": "Drink and food specials",
+      "icon": "🍻",
+      "color": "#FF6B6B",
+      "subcategories": [
+        "wine_hour",
+        "beer_special",
+        "cocktail_special",
+        "appetizer_special"
+      ]
+    },
+    {
+      "id": "trivia",
+      "name": "Trivia Nights",
+      "description": "Weekly pub trivia competitions",
+      "icon": "🧠",
+      "color": "#4ECDC4",
+      "subcategories": [
+        "general_trivia",
+        "sports_trivia",
+        "music_trivia",
+        "movie_trivia"
+      ]
+    },
+    {
+      "id": "bingo",
+      "name": "Bingo Nights",
+      "description": "Bingo games with prizes",
+      "icon": "🎲",
+      "color": "#95E1D3",
+      "subcategories": [
+        "drag_bingo",
+        "themed_bingo",
+        "regular_bingo"
+      ]
+    },
+    {
+      "id": "dining",
+      "name": "Featured Dining",
+      "description": "Featured restaurants with special menus",
+      "icon": "🍽️",
+      "color": "#FFE66D",
+      "subcategories": [
+        "fine_dining",
+        "casual",
+        "ethnic_cuisine",
+        "rooftop"
+      ]
+    },
+    {
+      "id": "sports",
+      "name": "Local Sports",
+      "description": "Warriors, 49ers, Giants, Earthquakes games",
+      "icon": "🏀",
+      "color": "#A8E6CF",
+      "subcategories": [
+        "nba",
+        "nfl",
+        "mlb",
+        "mls"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other Activities",
+      "description": "Comedy, music, events, etc.",
+      "icon": "🎭",
+      "color": "#C7CEEA",
+      "subcategories": [
+        "comedy",
+        "live_music",
+        "events",
+        "shows"
+      ]
+    }
+  ],
+  "neighborhoods": [
+    "Downtown/Financial District",
+    "North Beach",
+    "Chinatown",
+    "Marina",
+    "Cow Hollow",
+    "Haight-Ashbury",
+    "Castro",
+    "Mission",
+    "SoMa",
+    "Embarcadero",
+    "NOPA",
+    "Outer Sunset",
+    "Inner Sunset",
+    "Richmond District",
+    "Tenderloin"
+  ]
+}

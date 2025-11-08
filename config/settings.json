@@ -1,0 +1,58 @@
+{
+  "app_name": "SF Nightlife Guide",
+  "version": "1.0.0",
+  "city": "San Francisco",
+  "timezone": "America/Los_Angeles",
+  "features": {
+    "featured_events": true,
+    "neighborhood_filter": true,
+    "category_filter": true,
+    "ratings": true,
+    "map_integration": false,
+    "user_accounts": false,
+    "favorites": false,
+    "notifications": false
+  },
+  "event_categories_enabled": [
+    "happy_hour",
+    "trivia",
+    "bingo",
+    "dining",
+    "sports",
+    "other"
+  ],
+  "neighborhoods_enabled": [
+    "Downtown/Financial District",
+    "North Beach",
+    "Chinatown",
+    "Marina",
+    "Cow Hollow",
+    "Haight-Ashbury",
+    "Castro",
+    "Mission",
+    "SoMa",
+    "Embarcadero",
+    "NOPA",
+    "Outer Sunset",
+    "Inner Sunset",
+    "Richmond District",
+    "Tenderloin"
+  ],
+  "age_restrictions": {
+    "18+": "Must be 18 or older",
+    "21+": "Must be 21 or older",
+    "all_ages": "All ages welcome"
+  },
+  "featured_events_limit": 5,
+  "events_per_category": 10,
+  "default_view": "daily",
+  "operating_hours": {
+    "earliest_start": "08:00",
+    "latest_end": "02:00"
+  },
+  "update_frequency": "weekly",
+  "data_retention": {
+    "current_events": "indefinite",
+    "archived_events": "2 years"
+  }
+}

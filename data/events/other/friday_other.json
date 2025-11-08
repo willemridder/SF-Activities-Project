@@ -1,0 +1,128 @@
+[
+  {
+    "id": "other_comedy_friday",
+    "name": "Stand-Up Comedy at The Punch Line",
+    "category": "other",
+    "venue": {
+      "id": "venue_punchline",
+      "name": "The Punch Line Comedy Club",
+      "address": "444 Battery St, San Francisco, CA 94111",
+      "neighborhood": "Financial District",
+      "phone": "(415) 397-7573",
+      "website": "https://punchlinecomedyclub.com",
+      "type": "other"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "19:30",
+      "end_time": "21:30",
+      "recurring": false,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Local and touring comedians performing live. Two shows Friday night.",
+      "price": "$25-$35 entry",
+      "specials": [
+        "2-drink minimum",
+        "Full bar with cocktails",
+        "Food available",
+        "Early show 7:30pm, Late show 9:30pm"
+      ],
+      "capacity": 120,
+      "age_requirement": "18+",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@punchlinecomedyclub"
+    },
+    "ratings": {
+      "google": 4.4,
+      "yelp": 4.3
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "other_live_music_friday",
+    "name": "Live Jazz at Vesuvio Cafe",
+    "category": "other",
+    "venue": {
+      "id": "venue_vesuvio",
+      "name": "Vesuvio Cafe",
+      "address": "255 Columbus Ave, San Francisco, CA 94133",
+      "neighborhood": "North Beach",
+      "phone": "(415) 362-3370",
+      "website": "https://vesuviocafe.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "20:00",
+      "end_time": "23:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Live jazz performers in historic North Beach bar. Great cocktails.",
+      "price": "$0 entry",
+      "specials": [
+        "Cocktails - $8-$12",
+        "Wine - $6-$8",
+        "Tip the band",
+        "Local artists weekly"
+      ],
+      "capacity": 80,
+      "age_requirement": "21+",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@vesuviocafe"
+    },
+    "ratings": {
+      "google": 4.5,
+      "yelp": 4.4
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "other_drag_show_friday",
+    "name": "Drag Show at Café Tuff",
+    "category": "other",
+    "venue": {
+      "id": "venue_cafe_tuff",
+      "name": "Café Tuff",
+      "address": "3730 Market St, San Francisco, CA 94114",
+      "neighborhood": "Castro",
+      "phone": "(415) 431-4625",
+      "website": "https://cafetuff.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "21:00",
+      "end_time": "23:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Friday night drag show with local performers. High energy entertainment!",
+      "price": "$10-$15 entry",
+      "specials": [
+        "2-drink minimum",
+        "Cocktails - $7-$10",
+        "Tip the performers",
+        "Great atmosphere"
+      ],
+      "capacity": 100,
+      "age_requirement": "21+",
+      "featured": true
+    },
+    "contact": {
+      "instagram": "@cafetuff"
+    },
+    "ratings": {
+      "google": 4.4,
+      "yelp": 4.3
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  }
+]

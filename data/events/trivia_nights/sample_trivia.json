@@ -1,0 +1,83 @@
+[
+  {
+    "id": "trivia_001_wednesday",
+    "name": "General Knowledge Trivia",
+    "category": "trivia",
+    "venue": {
+      "id": "venue_003",
+      "name": "Zeitgeist Beer Garden",
+      "address": "100 Heritage St, San Francisco, CA 94103",
+      "neighborhood": "Mission",
+      "phone": "(415) 255-7505",
+      "website": "https://zeitgeistbeer.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Wednesday",
+      "start_time": "19:00",
+      "end_time": "21:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Weekly general knowledge trivia with prizes. Free to play, drink minimum suggested.",
+      "price": "Free entry",
+      "specials": [
+        "$1 off beers during trivia",
+        "Prize pool: $100 gift card"
+      ],
+      "capacity": 200,
+      "age_requirement": "21+",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@zeitgeistbeer"
+    },
+    "ratings": {
+      "google": 4.4,
+      "yelp": 4.3
+    },
+    "last_updated": "2025-11-07T10:30:00Z"
+  },
+  {
+    "id": "trivia_002_thursday",
+    "name": "Sports & Pop Culture Trivia",
+    "category": "trivia",
+    "venue": {
+      "id": "venue_004",
+      "name": "The Knockout",
+      "address": "3223 Mission St, San Francisco, CA 94110",
+      "neighborhood": "Mission",
+      "phone": "(415) 550-6994",
+      "website": "https://theknockoutsf.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Thursday",
+      "start_time": "19:30",
+      "end_time": "21:30",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Sports and pop culture themed trivia with live DJ",
+      "price": "Free entry",
+      "specials": [
+        "Draft beer - $4",
+        "Well drinks - $5",
+        "1st place: $75, 2nd place: $50"
+      ],
+      "capacity": 150,
+      "age_requirement": "21+",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@theknockoutsf"
+    },
+    "ratings": {
+      "google": 4.2,
+      "yelp": 4.1
+    },
+    "last_updated": "2025-11-07T10:30:00Z"
+  }
+]

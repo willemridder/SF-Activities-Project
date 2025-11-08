@@ -1,0 +1,86 @@
+[
+  {
+    "id": "happy_hour_001_monday",
+    "name": "Monday Margarita Night",
+    "category": "happy_hour",
+    "venue": {
+      "id": "venue_001",
+      "name": "El Jardin",
+      "address": "250 Columbus Ave, San Francisco, CA 94133",
+      "neighborhood": "North Beach",
+      "phone": "(415) 421-3550",
+      "website": "https://eljardin.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Monday",
+      "start_time": "16:00",
+      "end_time": "18:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Half-price margaritas and tacos",
+      "price": "$0 entry",
+      "specials": [
+        "Margarita - $5",
+        "House Tequila - $4",
+        "Fish tacos - $3"
+      ],
+      "capacity": null,
+      "age_requirement": "21+",
+      "featured": true
+    },
+    "contact": {
+      "email": "info@eljardin.com",
+      "instagram": "@eljardinbar"
+    },
+    "ratings": {
+      "google": 4.3,
+      "yelp": 4.2
+    },
+    "last_updated": "2025-11-07T10:30:00Z"
+  },
+  {
+    "id": "happy_hour_002_tuesday",
+    "name": "Wine Down Tuesday",
+    "category": "happy_hour",
+    "venue": {
+      "id": "venue_002",
+      "name": "The Slanted Door",
+      "address": "1 Ferry Building, San Francisco, CA 94111",
+      "neighborhood": "Embarcadero",
+      "phone": "(415) 861-1224",
+      "website": "https://slanteddoor.com",
+      "type": "restaurant"
+    },
+    "schedule": {
+      "day_of_week": "Tuesday",
+      "start_time": "16:00",
+      "end_time": "18:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "50% off wine selection and appetizers",
+      "price": "$0 entry",
+      "specials": [
+        "Wine - 50% off",
+        "Appetizers - 50% off",
+        "Charcuterie boards - $15"
+      ],
+      "capacity": null,
+      "age_requirement": "21+",
+      "featured": false
+    },
+    "contact": {
+      "email": "info@slanteddoor.com",
+      "instagram": "@slanteddoor"
+    },
+    "ratings": {
+      "google": 4.5,
+      "yelp": 4.4
+    },
+    "last_updated": "2025-11-07T10:30:00Z"
+  }
+]

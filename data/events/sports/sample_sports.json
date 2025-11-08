@@ -1,0 +1,86 @@
+[
+  {
+    "id": "sports_001_monday",
+    "name": "Golden State Warriors vs NBA Opponent",
+    "category": "sports",
+    "venue": {
+      "id": "venue_warriors",
+      "name": "Chase Center",
+      "address": "1 Warriors Way, San Francisco, CA 94158",
+      "neighborhood": "Mission Bay",
+      "phone": "(415) 915-0500",
+      "website": "https://chasecenter.com",
+      "type": "sports_bar"
+    },
+    "schedule": {
+      "day_of_week": "Monday",
+      "start_time": "19:30",
+      "end_time": "22:00",
+      "recurring": false,
+      "exceptions": []
+    },
+    "details": {
+      "description": "NBA Regular Season Game - Golden State Warriors",
+      "price": "$75-$450",
+      "specials": [
+        "Premium club seating available",
+        "Parking: $30",
+        "Food and drink concessions on-site"
+      ],
+      "capacity": 18064,
+      "age_requirement": "all_ages",
+      "featured": true
+    },
+    "contact": {
+      "phone": "(415) 915-0500",
+      "website": "https://chasecenter.com"
+    },
+    "ratings": {
+      "google": 4.7,
+      "yelp": 4.5
+    },
+    "last_updated": "2025-11-07T10:30:00Z"
+  },
+  {
+    "id": "sports_002_sunday",
+    "name": "San Francisco Giants Game",
+    "category": "sports",
+    "venue": {
+      "id": "venue_giants",
+      "name": "Oracle Park",
+      "address": "24 Willie Mays Plz, San Francisco, CA 94107",
+      "neighborhood": "Mission Bay",
+      "phone": "(415) 972-2000",
+      "website": "https://mlb.com/giants",
+      "type": "sports_bar"
+    },
+    "schedule": {
+      "day_of_week": "Sunday",
+      "start_time": "13:00",
+      "end_time": "16:00",
+      "recurring": false,
+      "exceptions": []
+    },
+    "details": {
+      "description": "MLB Regular Season Game - San Francisco Giants",
+      "price": "$25-$200",
+      "specials": [
+        "Sunday day game",
+        "Happy hour prices at stadium bars",
+        "Local food vendors on-site"
+      ],
+      "capacity": 41915,
+      "age_requirement": "all_ages",
+      "featured": false
+    },
+    "contact": {
+      "phone": "(415) 972-2000",
+      "website": "https://mlb.com/giants"
+    },
+    "ratings": {
+      "google": 4.6,
+      "yelp": 4.4
+    },
+    "last_updated": "2025-11-07T10:30:00Z"
+  }
+]

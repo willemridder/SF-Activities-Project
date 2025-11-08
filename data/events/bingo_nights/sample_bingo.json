@@ -1,0 +1,84 @@
+[
+  {
+    "id": "bingo_001_saturday",
+    "name": "Drag Queen Bingo",
+    "category": "bingo",
+    "venue": {
+      "id": "venue_005",
+      "name": "The Lookout",
+      "address": "3600 16th St, San Francisco, CA 94114",
+      "neighborhood": "Castro",
+      "phone": "(415) 431-3611",
+      "website": "https://thelookoutsf.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Saturday",
+      "start_time": "21:00",
+      "end_time": "23:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Interactive drag queen hosted bingo with entertainment and prizes",
+      "price": "$10-20 entry",
+      "specials": [
+        "Bingo card: $5",
+        "Prize pool: $500+",
+        "Drink specials during event"
+      ],
+      "capacity": 250,
+      "age_requirement": "21+",
+      "featured": true
+    },
+    "contact": {
+      "instagram": "@thelookoutsf"
+    },
+    "ratings": {
+      "google": 4.6,
+      "yelp": 4.5
+    },
+    "last_updated": "2025-11-07T10:30:00Z"
+  },
+  {
+    "id": "bingo_002_sunday",
+    "name": "Brunch Bingo",
+    "category": "bingo",
+    "venue": {
+      "id": "venue_006",
+      "name": "Rosewood San Francisco",
+      "address": "181 Third St, San Francisco, CA 94103",
+      "neighborhood": "SoMa",
+      "phone": "(415) 781-3555",
+      "website": "https://rosewoodsf.com",
+      "type": "restaurant"
+    },
+    "schedule": {
+      "day_of_week": "Sunday",
+      "start_time": "10:00",
+      "end_time": "12:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Casual brunch bingo with food and drink specials",
+      "price": "Free entry",
+      "specials": [
+        "Mimosa - $6",
+        "Bloody Mary - $8",
+        "Brunch entrees with bingo card"
+      ],
+      "capacity": 100,
+      "age_requirement": "21+",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@rosewoodsf"
+    },
+    "ratings": {
+      "google": 4.4,
+      "yelp": 4.3
+    },
+    "last_updated": "2025-11-07T10:30:00Z"
+  }
+]

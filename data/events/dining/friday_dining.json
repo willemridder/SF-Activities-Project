@@ -1,0 +1,173 @@
+[
+  {
+    "id": "dining_quince_friday",
+    "name": "Featured Dining - Quince",
+    "category": "dining",
+    "venue": {
+      "id": "venue_quince",
+      "name": "Quince",
+      "address": "470 Pacific Ave, San Francisco, CA 94133",
+      "neighborhood": "Downtown/Financial District",
+      "phone": "(415) 775-8500",
+      "website": "https://quincerestaurant.com",
+      "type": "restaurant"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "17:30",
+      "end_time": "22:00",
+      "recurring": false,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Michelin-starred Italian cuisine with seasonal tasting menu. Intimate and refined.",
+      "price": "$$$$",
+      "specials": [
+        "9-course tasting menu - $185",
+        "Wine pairing - $95",
+        "Vegetarian option available",
+        "Sommelier recommendations available"
+      ],
+      "capacity": 70,
+      "age_requirement": "all_ages",
+      "featured": true
+    },
+    "contact": {
+      "email": "hello@quincerestaurant.com",
+      "instagram": "@quincerestaurant"
+    },
+    "ratings": {
+      "google": 4.7,
+      "yelp": 4.6
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "dining_slanted_door_friday",
+    "name": "Featured Dining - The Slanted Door",
+    "category": "dining",
+    "venue": {
+      "id": "venue_slanted_door",
+      "name": "The Slanted Door",
+      "address": "1 Ferry Building, San Francisco, CA 94111",
+      "neighborhood": "Embarcadero",
+      "phone": "(415) 861-1224",
+      "website": "https://slanteddoor.com",
+      "type": "restaurant"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "11:30",
+      "end_time": "22:00",
+      "recurring": false,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Vietnamese cuisine with bay views. Chef's special menu tonight.",
+      "price": "$$$",
+      "specials": [
+        "3-course prix fixe - $65",
+        "Wine pairing - $35",
+        "Seasonal crab appetizer special",
+        "Bay-window seating available"
+      ],
+      "capacity": 200,
+      "age_requirement": "all_ages",
+      "featured": true
+    },
+    "contact": {
+      "email": "info@slanteddoor.com",
+      "instagram": "@slanteddoor"
+    },
+    "ratings": {
+      "google": 4.5,
+      "yelp": 4.4
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "dining_state_bird_friday",
+    "name": "State Bird Provisions Dinner",
+    "category": "dining",
+    "venue": {
+      "id": "venue_state_bird",
+      "name": "State Bird Provisions",
+      "address": "1529 Fillmore St, San Francisco, CA 94115",
+      "neighborhood": "Western Addition",
+      "phone": "(415) 440-3966",
+      "website": "https://statebirdsf.com",
+      "type": "restaurant"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "17:30",
+      "end_time": "22:30",
+      "recurring": false,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Creative small plates served dim sum style. Unique and fun dining experience.",
+      "price": "$$$",
+      "specials": [
+        "Omakase-style dining",
+        "5-course selection - $70",
+        "Cocktail pairings - $45",
+        "Walk-in friendly (wait times vary)"
+      ],
+      "capacity": 60,
+      "age_requirement": "all_ages",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@statebirdsf"
+    },
+    "ratings": {
+      "google": 4.6,
+      "yelp": 4.5
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "dining_gary_danko_friday",
+    "name": "Gary Danko - Reservation Required",
+    "category": "dining",
+    "venue": {
+      "id": "venue_gary_danko",
+      "name": "Gary Danko",
+      "address": "800 North Point St, San Francisco, CA 94109",
+      "neighborhood": "Fisherman's Wharf",
+      "phone": "(415) 749-2060",
+      "website": "https://garydanko.com",
+      "type": "restaurant"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "17:00",
+      "end_time": "22:00",
+      "recurring": false,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Fine dining with French-influenced California cuisine. Michelin-starred.",
+      "price": "$$$$",
+      "specials": [
+        "Tasting menu - $225",
+        "Wine pairing - $125",
+        "Vegetarian menu available",
+        "Reservation required (fully booked)"
+      ],
+      "capacity": 50,
+      "age_requirement": "all_ages",
+      "featured": false
+    },
+    "contact": {
+      "phone": "(415) 749-2060",
+      "instagram": "@garydanko"
+    },
+    "ratings": {
+      "google": 4.7,
+      "yelp": 4.6
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  }
+]

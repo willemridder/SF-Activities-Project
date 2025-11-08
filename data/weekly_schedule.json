@@ -1,0 +1,142 @@
+{
+  "week_starting": "2025-11-03",
+  "week_ending": "2025-11-09",
+  "date_today": "2025-11-07",
+  "summary": {
+    "total_events": 15,
+    "total_venues": 12,
+    "today_events": 15,
+    "featured_events_count": 7,
+    "categories": {
+      "happy_hour": 5,
+      "trivia": 2,
+      "bingo": 1,
+      "dining": 4,
+      "sports": 2,
+      "other": 3
+    },
+    "featured_events": [
+      {
+        "id": "happy_hour_slanted_door_friday",
+        "name": "Happy Hour at The Slanted Door",
+        "category": "happy_hour",
+        "time": "16:00-18:00",
+        "venue": "The Slanted Door"
+      },
+      {
+        "id": "happy_hour_zeitgeist_friday",
+        "name": "Zeitgeist Friday Happy Hour",
+        "category": "happy_hour",
+        "time": "16:00-19:00",
+        "venue": "Zeitgeist Beer Garden"
+      },
+      {
+        "id": "trivia_knockout_friday",
+        "name": "Pub Trivia at The Knockout",
+        "category": "trivia",
+        "time": "21:00-23:00",
+        "venue": "The Knockout"
+      },
+      {
+        "id": "bingo_castro_friday",
+        "name": "Friday Night Bingo at The Lookout",
+        "category": "bingo",
+        "time": "22:00-23:30",
+        "venue": "The Lookout"
+      },
+      {
+        "id": "dining_quince_friday",
+        "name": "Featured Dining - Quince",
+        "category": "dining",
+        "time": "17:30-22:00",
+        "venue": "Quince"
+      },
+      {
+        "id": "dining_slanted_door_friday",
+        "name": "Featured Dining - The Slanted Door",
+        "category": "dining",
+        "time": "11:30-22:00",
+        "venue": "The Slanted Door"
+      },
+      {
+        "id": "sports_warriors_friday",
+        "name": "Golden State Warriors vs NBA Opponent",
+        "category": "sports",
+        "time": "19:30-22:30",
+        "venue": "Chase Center"
+      }
+    ]
+  },
+  "daily_breakdown": {
+    "Monday": {
+      "date": "2025-11-03",
+      "events": [],
+      "featured": [],
+      "total": 0
+    },
+    "Tuesday": {
+      "date": "2025-11-04",
+      "events": [],
+      "featured": [],
+      "total": 0
+    },
+    "Wednesday": {
+      "date": "2025-11-05",
+      "events": [],
+      "featured": [],
+      "total": 0
+    },
+    "Thursday": {
+      "date": "2025-11-06",
+      "events": [],
+      "featured": [],
+      "total": 0
+    },
+    "Friday": {
+      "date": "2025-11-07",
+      "events": [
+        "happy_hour_slanted_door_friday",
+        "happy_hour_ferry_plaza_friday",
+        "happy_hour_zeitgeist_friday",
+        "happy_hour_south_beach_friday",
+        "happy_hour_el_jardin_friday",
+        "trivia_knockout_friday",
+        "trivia_zeitgeist_friday",
+        "bingo_castro_friday",
+        "dining_quince_friday",
+        "dining_slanted_door_friday",
+        "dining_state_bird_friday",
+        "dining_gary_danko_friday",
+        "sports_warriors_friday",
+        "sports_bars_friday",
+        "other_comedy_friday",
+        "other_live_music_friday",
+        "other_drag_show_friday"
+      ],
+      "featured": [
+        "happy_hour_slanted_door_friday",
+        "happy_hour_zeitgeist_friday",
+        "trivia_knockout_friday",
+        "bingo_castro_friday",
+        "dining_quince_friday",
+        "dining_slanted_door_friday",
+        "sports_warriors_friday",
+        "other_drag_show_friday"
+      ],
+      "total": 17
+    },
+    "Saturday": {
+      "date": "2025-11-08",
+      "events": [],
+      "featured": [],
+      "total": 0
+    },
+    "Sunday": {
+      "date": "2025-11-09",
+      "events": [],
+      "featured": [],
+      "total": 0
+    }
+  },
+  "last_updated": "2025-11-07T12:00:00Z"
+}

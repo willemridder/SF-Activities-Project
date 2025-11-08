@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF Nightlife Guide - Agent-Powered</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #aaa;
+        }
+
+        /* Day Navigation */
+        .day-navigation {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .day-btn {
+            padding: 10px 20px;
+            border: 2px solid #ff6b6b;
+            background: transparent;
+            color: #ff6b6b;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .day-btn:hover,
+        .day-btn.active {
+            background: #ff6b6b;
+            color: #fff;
+        }
+
+        /* Next Event Widget */
+        .next-event-widget {
+            background: linear-gradient(135deg, rgba(255, 217, 61, 0.15), rgba(255, 107, 107, 0.15));
+            border: 2px solid #ffd93d;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .next-event-widget h3 {
+            color: #ffd93d;
+            margin-bottom: 10px;
+        }
+
+        .next-event-widget .event-name {
+            font-size: 1.3em;
+            color: #ff6b6b;
+            margin: 10px 0;
+        }
+
+        .next-event-widget .time-until {
+            font-size: 1.2em;
+            color: #fff;
+            margin: 10px 0;
+        }
+
+        .next-event-widget .recommendation {
+            font-size: 0.95em;
+            color: #aaa;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Agent Status */
+        .agent-status {
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            font-size: 0.85em;
+        }
+
+        .agent-status h4 {
+            color: #ffd93d;
+            margin-bottom: 10px;
+        }
+
+        .agent-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 107, 107, 0.2);
+        }
+
+        .agent-item:last-child {
+            border-bottom: none;
+        }
+
+        .agent-name {
+            color: #fff;
+        }
+
+        .agent-status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4ade80;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 10px 15px;
+            border: 1px solid #ff6b6b;
+            background: transparent;
+            color: #ff6b6b;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: #ff6b6b;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #ff6b6b;
+            background: transparent;
+            color: #ff6b6b;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #ff6b6b;
+            color: #fff;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 0 auto 20px;
+            font-size: 1em;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 2px solid #ffd93d;
+        }
+
+        .search-bar::placeholder {
+            color: #aaa;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Events Grid */
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Event Card */
+        .event-card {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 217, 61, 0.1));
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff6b6b;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
+        }
+
+        .event-card.featured {
+            border: 2px solid #ffd93d;
+            background: linear-gradient(135deg, rgba(255, 217, 61, 0.15), rgba(255, 107, 107, 0.15));
+        }
+
+        .event-card.featured::before {
+            content: "⭐ FEATURED";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffd93d;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: bold;
+        }
+
+        .event-card.repeating::after {
+            content: "🔄 WEEKLY";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #4ecdc4;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: bold;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: #ff6b6b;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .event-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffd93d;
+        }
+
+        .event-venue {
+            font-size: 0.95em;
+            color: #ddd;
+            margin-bottom: 5px;
+        }
+
+        .event-time {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .event-price {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+            color: #ffd93d;
+            margin-bottom: 8px;
+        }
+
+        .view-details-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .view-details-btn:hover {
+            background: #ff5252;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #aaa;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 1.5em;
+            color: #ffd93d;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 217, 61, 0.3);
+        }
+
+        /* Repeating Events List */
+        .repeating-events-list {
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 107, 107, 0.1));
+            border: 1px solid rgba(78, 205, 196, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .repeating-event-item {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .repeating-event-item h4 {
+            color: #4ecdc4;
+            margin-bottom: 8px;
+        }
+
+        .repeating-event-item p {
+            color: #aaa;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            margin: 5% auto;
+            padding: 30px;
+            border: 1px solid #ff6b6b;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: #ff6b6b;
+        }
+
+        .modal h2 {
+            color: #ffd93d;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .modal-section {
+            margin-bottom: 20px;
+        }
+
+        .modal-section h3 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .modal-section p {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .contact-link {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid rgba(255, 107, 107, 0.2);
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .events-container {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 20% auto;
+            }
+        }
+
+        /* Loading indicator */
+        .loading {
+            text-align: center;
+            color: #ffd93d;
+            font-size: 1.1em;
+            margin: 40px 0;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 107, 107, 0.3);
+            border-top: 4px solid #ff6b6b;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🌃 SF Nightlife Guide - Agent Powered</h1>
+            <p>Intelligent event discovery with multi-day look-ahead</p>
+        </header>
+
+        <!-- Next Event Widget -->
+        <div class="next-event-widget" id="nextEventWidget" style="display: none;">
+            <h3>⏰ Next Event Coming Up!</h3>
+            <div class="event-name" id="nextEventName"></div>
+            <div class="time-until" id="nextEventTime"></div>
+            <div class="recommendation" id="nextEventRecommendation"></div>
+        </div>
+
+        <!-- Agent Status -->
+        <div class="agent-status" id="agentStatus" style="display: none;">
+            <h4>🤖 Agent Status</h4>
+            <div id="agentStatusContent"></div>
+        </div>
+
+        <!-- Day Navigation (Multi-day look-ahead) -->
+        <div class="day-navigation" id="dayNavigation"></div>
+
+        <!-- Search -->
+        <input
+            type="text"
+            class="search-bar"
+            id="search-input"
+            placeholder="Search events, venues, neighborhoods..."
+        >
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="all">All Events</button>
+            <button class="tab-btn" data-tab="happy-hour">🍻 Happy Hour</button>
+            <button class="tab-btn" data-tab="dining">🍽️ Dining</button>
+            <button class="tab-btn" data-tab="activities">🎭 Activities</button>
+            <button class="tab-btn" data-tab="repeating">🔄 Repeating Events</button>
+            <button class="tab-btn" data-tab="history">📊 History</button>
+        </div>
+
+        <!-- All Events Tab -->
+        <div class="tab-content all-events-tab active" data-tab="all">
+            <!-- Filters -->
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">✓ All</button>
+                <button class="filter-btn" data-filter="featured">⭐ Featured</button>
+                <button class="filter-btn" data-filter="happy_hour">🍻 Happy Hour</button>
+                <button class="filter-btn" data-filter="dining">🍽️ Dining</button>
+                <button class="filter-btn" data-filter="trivia">🧠 Trivia</button>
+                <button class="filter-btn" data-filter="bingo">🎲 Bingo</button>
+                <button class="filter-btn" data-filter="sports">🏀 Sports</button>
+                <button class="filter-btn" data-filter="other">🎭 Other</button>
+            </div>
+
+            <!-- Events Container -->
+            <div class="events-container" id="events-container"></div>
+        </div>
+
+        <!-- Happy Hour Tab -->
+        <div class="tab-content" data-tab="happy-hour">
+            <h2 class="section-title">🍻 Happy Hour Deals</h2>
+            <div class="events-container" id="happyHourContainer"></div>
+        </div>
+
+        <!-- Dining Tab -->
+        <div class="tab-content" data-tab="dining">
+            <h2 class="section-title">🍽️ Bars & Restaurants</h2>
+            <div class="events-container" id="diningContainer"></div>
+        </div>
+
+        <!-- Activities Tab -->
+        <div class="tab-content" data-tab="activities">
+            <h2 class="section-title">🎭 Entertainment & Activities</h2>
+            <div class="events-container" id="activitiesContainer"></div>
+        </div>
+
+        <!-- Repeating Events Tab -->
+        <div class="tab-content" data-tab="repeating">
+            <h2 class="section-title">🔄 Repeating Events (Weekly Series)</h2>
+            <div class="repeating-events-list" id="repeatingEventsList"></div>
+        </div>
+
+        <!-- History Tab -->
+        <div class="tab-content" data-tab="history">
+            <h2 class="section-title">📊 Your History & Preferences</h2>
+            <div id="historyContainer"></div>
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+            <h2>No events found</h2>
+            <p>Try adjusting your filters or search</p>
+        </div>
+    </div>
+
+    <!-- Modal for Event Details -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-event-name"></h2>
+
+            <div class="modal-section">
+                <h3>📍 Venue Information</h3>
+                <p><strong>Name:</strong> <span id="modal-venue-name"></span></p>
+                <p><strong>Address:</strong> <span id="modal-address"></span></p>
+                <p><strong>Neighborhood:</strong> <span id="modal-neighborhood"></span></p>
+                <p><strong>Phone:</strong> <a href="tel:" class="contact-link" id="modal-phone"></a></p>
+                <p><strong>Website:</strong> <a href="" target="_blank" class="contact-link" id="modal-website">Visit Website</a></p>
+            </div>
+
+            <div class="modal-section">
+                <h3>🕐 Schedule</h3>
+                <p><strong>Day:</strong> <span id="modal-day"></span></p>
+                <p><strong>Time:</strong> <span id="modal-time"></span></p>
+                <p><strong>Recurring:</strong> <span id="modal-recurring"></span></p>
+            </div>
+
+            <div class="modal-section">
+                <h3>💰 Details</h3>
+                <p><strong>Price:</strong> <span id="modal-price"></span></p>
+                <p><strong>Age Requirement:</strong> <span id="modal-age"></span></p>
+                <p><strong>Description:</strong> <span id="modal-description"></span></p>
+            </div>
+
+            <div class="modal-section" id="specials-section">
+                <h3>🎉 Specials & Deals</h3>
+                <div id="modal-specials"></div>
+            </div>
+
+            <div class="modal-section" id="ratings-section">
+                <h3>⭐ Ratings</h3>
+                <div id="modal-ratings"></div>
+            </div>
+
+            <button class="view-details-btn" id="trackAttendanceBtn">📌 Track Interest</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>SF Nightlife Guide • Powered by Intelligent Agents</p>
+    </footer>
+
+    <!-- Load Agents System -->
+    <script src="agents_system.js"></script>
+
+    <!-- Load Expanded Events Database -->
+    <script src="expanded_events_data.js"></script>
+
+    <script>
+        // Load expanded events database (74+ events across all 7 days)
+        let allEvents = [];
+
+        let currentDay = 'Friday';
+        let currentFilter = 'all';
+        let searchTerm = '';
+        let currentEventId = null;
+
+        // Initialize agents
+        const agents = agentManager;
+
+        // DOM elements
+        const modal = document.getElementById('eventModal');
+        const closeBtn = document.querySelector('.close-btn');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const searchInput = document.getElementById('search-input');
+        const trackAttendanceBtn = document.getElementById('trackAttendanceBtn');
+
+        // Format time
+        function formatTime(time24) {
+            const [hours, minutes] = time24.split(':');
+            const hour = parseInt(hours);
+            const ampm = hour >= 12 ? 'PM' : 'AM';
+            const hour12 = hour % 12 || 12;
+            return `${hour12}:${minutes} ${ampm}`;
+        }
+
+        // Initialize day navigation
+        function initializeDayNavigation() {
+            const dayNav = document.getElementById('dayNavigation');
+            const today = new Date();
+            dayNav.innerHTML = '';
+
+            for (let i = 0; i < 7; i++) {
+                const date = new Date(today);
+                date.setDate(date.getDate() + i);
+                const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
+                const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+                const btn = document.createElement('button');
+                btn.className = `day-btn ${i === 0 ? 'active' : ''}`;
+                btn.textContent = `${dayName}\n${dateStr}`;
+                btn.onclick = () => switchDay(dayName, btn);
+
+                dayNav.appendChild(btn);
+            }
+        }
+
+        function switchDay(day, btn) {
+            document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentDay = day;
+            renderEvents();
+        }
+
+        // Render events
+        function renderEvents() {
+            const container = document.getElementById('events-container');
+            const emptyState = document.getElementById('empty-state');
+
+            let filtered = allEvents.filter(event => {
+                const matchesFilter = currentFilter === 'all' ||
+                    currentFilter === 'featured' ? event.featured :
+                    event.category === currentFilter;
+
+                const matchesSearch = searchTerm === '' ||
+                    event.name.toLowerCase().includes(searchTerm) ||
+                    event.venue.name.toLowerCase().includes(searchTerm) ||
+                    event.venue.neighborhood.toLowerCase().includes(searchTerm);
+
+                const matchesDay = currentDay === 'All' || event.schedule.day_of_week === currentDay;
+
+                return matchesFilter && matchesSearch && matchesDay;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            container.innerHTML = filtered.map(event => {
+                const isRepeating = event.schedule?.recurring;
+                return `
+                    <div class="event-card ${event.featured ? 'featured' : ''} ${isRepeating ? 'repeating' : ''}">
+                        <span class="category-badge">${event.category.replace('_', ' ').toUpperCase()}</span>
+                        <div class="event-name">${event.name}</div>
+                        <div class="event-venue">${event.venue.name}</div>
+                        <div class="event-time">${formatTime(event.schedule.start_time)} - ${formatTime(event.schedule.end_time)}</div>
+                        <div class="event-price">${event.details.price}</div>
+                        <button class="view-details-btn" onclick="showEventDetails('${event.id}')">View Details</button>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Show event details
+        function showEventDetails(eventId) {
+            const event = allEvents.find(e => e.id === eventId);
+            if (!event) return;
+
+            currentEventId = eventId;
+
+            document.getElementById('modal-event-name').textContent = event.name;
+            document.getElementById('modal-venue-name').textContent = event.venue.name;
+            document.getElementById('modal-address').textContent = event.venue.address;
+            document.getElementById('modal-neighborhood').textContent = event.venue.neighborhood;
+
+            const phoneLink = document.getElementById('modal-phone');
+            phoneLink.href = `tel:${event.venue.phone}`;
+            phoneLink.textContent = event.venue.phone;
+
+            const websiteLink = document.getElementById('modal-website');
+            websiteLink.href = event.venue.website;
+
+            document.getElementById('modal-day').textContent = event.schedule.day_of_week;
+            document.getElementById('modal-time').textContent = `${formatTime(event.schedule.start_time)} - ${formatTime(event.schedule.end_time)}`;
+            document.getElementById('modal-recurring').textContent = event.schedule.recurring ? 'Yes' : 'No';
+
+            document.getElementById('modal-price').textContent = event.details.price;
+            document.getElementById('modal-age').textContent = event.details.age_requirement;
+            document.getElementById('modal-description').textContent = event.details.description;
+
+            const specialsDiv = document.getElementById('modal-specials');
+            specialsDiv.innerHTML = event.details.specials.map(s => `<p>• ${s}</p>`).join('');
+
+            const ratingsDiv = document.getElementById('modal-ratings');
+            let ratingsHTML = '';
+            if (event.ratings.google) ratingsHTML += `<p>Google: ${event.ratings.google}/5 ⭐</p>`;
+            if (event.ratings.yelp) ratingsHTML += `<p>Yelp: ${event.ratings.yelp}/5 ⭐</p>`;
+            ratingsDiv.innerHTML = ratingsHTML;
+
+            modal.style.display = 'block';
+        }
+
+        // Track attendance
+        trackAttendanceBtn.addEventListener('click', () => {
+            const event = allEvents.find(e => e.id === currentEventId);
+            agents.agents.history.trackInterest(currentEventId, event.name, true);
+            trackAttendanceBtn.textContent = '✅ Interest Tracked!';
+            setTimeout(() => {
+                trackAttendanceBtn.textContent = '📌 Track Interest';
+            }, 2000);
+        });
+
+        // Close modal
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Filter buttons
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                renderEvents();
+            });
+        });
+
+        // Tab buttons
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+                document.querySelector(`.tab-content[data-tab="${tab}"]`).classList.add('active');
+                btn.classList.add('active');
+
+                // Handle special tab content
+                if (tab === 'happy-hour') {
+                    renderHappyHourTab();
+                } else if (tab === 'dining') {
+                    renderDiningTab();
+                } else if (tab === 'activities') {
+                    renderActivitiesTab();
+                } else if (tab === 'repeating') {
+                    renderRepeatingEventsTab();
+                } else if (tab === 'history') {
+                    renderHistoryTab();
+                }
+            });
+        });
+
+        // Agent-based tab rendering
+        function renderHappyHourTab() {
+            const container = document.getElementById('happyHourContainer');
+            const deals = agents.agents.dining.getHappyHourDeals(currentDay);
+
+            if (deals.length === 0) {
+                container.innerHTML = '<p style="color: #aaa; text-align: center;">No happy hour deals today</p>';
+                return;
+            }
+
+            container.innerHTML = deals.map(deal => `
+                <div class="event-card featured">
+                    <span class="category-badge">HAPPY HOUR</span>
+                    <div class="event-name">${deal.venue}</div>
+                    <div class="event-time">${deal.time}</div>
+                    <div style="color: #ffd93d; margin: 10px 0;">${deal.discount}</div>
+                    <div style="color: #aaa; font-size: 0.9em;">📍 ${deal.neighborhood}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderDiningTab() {
+            const container = document.getElementById('diningContainer');
+            const restaurants = agents.agents.dining.venues.restaurants;
+
+            container.innerHTML = restaurants.map(r => `
+                <div class="event-card">
+                    <span class="category-badge">RESTAURANT</span>
+                    <div class="event-name">${r.name}</div>
+                    <div class="event-venue">${r.cuisine} • ${r.priceRange}</div>
+                    <div style="color: #ffd93d; margin: 10px 0;">⭐ ${r.rating}/5</div>
+                    <div style="color: #aaa; font-size: 0.9em;">📍 ${r.neighborhood}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderActivitiesTab() {
+            const container = document.getElementById('activitiesContainer');
+            const activities = agents.agents.activities.getEntertainmentOptions(currentDay);
+
+            if (activities.length === 0) {
+                container.innerHTML = '<p style="color: #aaa; text-align: center;">No activities today</p>';
+                return;
+            }
+
+            container.innerHTML = activities.map(a => `
+                <div class="event-card ${a.featured ? 'featured' : ''}">
+                    <span class="category-badge">${a.type}</span>
+                    <div class="event-name">${a.name}</div>
+                    <div class="event-venue">${a.venue}</div>
+                    <div class="event-time">${a.time}</div>
+                    <div class="event-price">${a.price}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderRepeatingEventsTab() {
+            const container = document.getElementById('repeatingEventsList');
+            const repeating = agents.agents.history.identifyRepeatingEvents(allEvents);
+
+            if (Object.keys(repeating).length === 0) {
+                container.innerHTML = '<p style="color: #aaa;">No repeating events found</p>';
+                return;
+            }
+
+            container.innerHTML = Object.entries(repeating).map(([key, series]) => `
+                <div class="repeating-event-item">
+                    <h4>${series.name}</h4>
+                    <p><strong>Venue:</strong> ${series.venue}</p>
+                    <p><strong>When:</strong> Every ${series.day} at ${formatTime(series.time)}</p>
+                    <p><strong>Occurrences:</strong> ${series.events.length} event${series.events.length !== 1 ? 's' : ''}</p>
+                </div>
+            `).join('');
+        }
+
+        function renderHistoryTab() {
+            const container = document.getElementById('historyContainer');
+            const preferences = agents.agents.history.getUserPreferences();
+
+            container.innerHTML = `
+                <div style="color: #aaa; padding: 20px;">
+                    <h3 style="color: #ffd93d; margin-bottom: 15px;">Your Preferences</h3>
+                    <p><strong>Total Tracked:</strong> ${preferences.totalEvents} interactions</p>
+                    <p><strong>Unique Venues:</strong> ${preferences.uniqueVenues}</p>
+                    ${preferences.favoriteVenues.length > 0 ? `
+                        <div style="margin-top: 20px;">
+                            <h4 style="color: #ff6b6b; margin-bottom: 10px;">Favorite Venues</h4>
+                            ${preferences.favoriteVenues.map(fv => `
+                                <p>• ${fv.venue} (${fv.count} visit${fv.count !== 1 ? 's' : ''})</p>
+                            `).join('')}
+                        </div>
+                    ` : '<p style="margin-top: 20px;">Start tracking events to see your preferences!</p>'}
+                </div>
+            `;
+        }
+
+        // Search
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value.toLowerCase();
+            renderEvents();
+        });
+
+        // Update next event widget
+        function updateNextEventWidget() {
+            const nextEvent = agents.agents.updates.projectNextAvailableEvent(allEvents);
+
+            if (nextEvent) {
+                document.getElementById('nextEventName').textContent = nextEvent.event.name;
+                document.getElementById('nextEventTime').textContent = `Starting in ${nextEvent.timeUntil}`;
+                document.getElementById('nextEventRecommendation').textContent = nextEvent.recommendation;
+                document.getElementById('nextEventWidget').style.display = 'block';
+            }
+        }
+
+        // Update agent status
+        function updateAgentStatus() {
+            const health = agents.getAgentHealth();
+            const content = Object.entries(health).map(([name, status]) => `
+                <div class="agent-item">
+                    <span class="agent-name">${name.replace(/([A-Z])/g, ' $1').trim()}</span>
+                    <span style="display: flex; align-items: center; gap: 10px;">
+                        ${status.status}
+                        <span class="agent-status-indicator"></span>
+                    </span>
+                </div>
+            `).join('');
+
+            document.getElementById('agentStatusContent').innerHTML = content;
+        }
+
+        // Initialize
+        function init() {
+            // Load expanded events database on app start (triggers auto-refresh)
+            if (typeof getEventsDatabase === 'function') {
+                allEvents = getEventsDatabase();
+                console.log(`✅ Loaded ${allEvents.length} events from expanded database`);
+            }
+
+            initializeDayNavigation();
+            renderEvents();
+            updateNextEventWidget();
+            updateAgentStatus();
+            document.getElementById('agentStatus').style.display = 'block';
+
+            // Update widgets every minute
+            setInterval(() => {
+                updateNextEventWidget();
+                updateAgentStatus();
+            }, 60000);
+        }
+
+        init();
+    </script>
+</body>
+</html>

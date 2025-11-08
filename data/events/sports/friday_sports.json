@@ -1,0 +1,87 @@
+[
+  {
+    "id": "sports_warriors_friday",
+    "name": "Golden State Warriors vs NBA Opponent",
+    "category": "sports",
+    "venue": {
+      "id": "venue_chase_center",
+      "name": "Chase Center",
+      "address": "1 Warriors Way, San Francisco, CA 94158",
+      "neighborhood": "Mission Bay",
+      "phone": "(415) 915-0500",
+      "website": "https://chasecenter.com",
+      "type": "sports_bar"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "19:30",
+      "end_time": "22:30",
+      "recurring": false,
+      "exceptions": []
+    },
+    "details": {
+      "description": "NBA Regular Season - Warriors playing at home. High energy game!",
+      "price": "$100-$500",
+      "specials": [
+        "Premium club seating - $250-$500",
+        "Upper deck - $100-$150",
+        "Parking: $30 (reserve online)",
+        "Stadium food and drinks available"
+      ],
+      "capacity": 18064,
+      "age_requirement": "all_ages",
+      "featured": true
+    },
+    "contact": {
+      "phone": "(415) 915-0500",
+      "website": "https://chasecenter.com"
+    },
+    "ratings": {
+      "google": 4.7,
+      "yelp": 4.5
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "sports_bars_friday",
+    "name": "Watch Parties - Local Sports Bars",
+    "category": "sports",
+    "venue": {
+      "id": "venue_touchdown",
+      "name": "Touchdown SF",
+      "address": "1265 Mission St, San Francisco, CA 94103",
+      "neighborhood": "Mission",
+      "phone": "(415) 553-7500",
+      "website": "https://touchdownsf.com",
+      "type": "sports_bar"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "19:00",
+      "end_time": "23:00",
+      "recurring": false,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Watch Warriors game on big screens with other fans. Great atmosphere and food.",
+      "price": "$0 entry",
+      "specials": [
+        "Beer - $5",
+        "Wings - $0.50 each during game",
+        "Nachos - $10",
+        "Reservation recommended"
+      ],
+      "capacity": 200,
+      "age_requirement": "21+",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@touchdownsf"
+    },
+    "ratings": {
+      "google": 4.3,
+      "yelp": 4.2
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  }
+]

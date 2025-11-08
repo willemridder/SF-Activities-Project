@@ -1,0 +1,211 @@
+[
+  {
+    "id": "happy_hour_slanted_door_friday",
+    "name": "Happy Hour at The Slanted Door",
+    "category": "happy_hour",
+    "venue": {
+      "id": "venue_slanted_door",
+      "name": "The Slanted Door",
+      "address": "1 Ferry Building, San Francisco, CA 94111",
+      "neighborhood": "Embarcadero",
+      "phone": "(415) 861-1224",
+      "website": "https://slanteddoor.com",
+      "type": "restaurant"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "16:00",
+      "end_time": "18:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Happy hour with 50% off wine and appetizers. Bay views included.",
+      "price": "$0 entry",
+      "specials": [
+        "Wine - 50% off",
+        "Aperol Spritz - $6",
+        "Appetizers - 50% off",
+        "Charcuterie board - $15"
+      ],
+      "capacity": 200,
+      "age_requirement": "21+",
+      "featured": true
+    },
+    "contact": {
+      "email": "info@slanteddoor.com",
+      "instagram": "@slanteddoor"
+    },
+    "ratings": {
+      "google": 4.5,
+      "yelp": 4.4
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "happy_hour_ferry_plaza_friday",
+    "name": "Ferry Plaza Wine Merchant Happy Hour",
+    "category": "happy_hour",
+    "venue": {
+      "id": "venue_ferry_plaza",
+      "name": "Ferry Plaza Wine Merchant",
+      "address": "1 Ferry Building #23, San Francisco, CA 94111",
+      "neighborhood": "Embarcadero",
+      "phone": "(415) 391-9400",
+      "website": "https://ferrywinemerchant.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "17:00",
+      "end_time": "19:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Wine tasting happy hour with $5 pours and small plates",
+      "price": "$0 entry",
+      "specials": [
+        "Wine pour - $5",
+        "Cheese & charcuterie - $8",
+        "Oysters - $1 each"
+      ],
+      "capacity": 80,
+      "age_requirement": "21+",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@ferrywinemerchant"
+    },
+    "ratings": {
+      "google": 4.6,
+      "yelp": 4.5
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "happy_hour_zeitgeist_friday",
+    "name": "Zeitgeist Friday Happy Hour",
+    "category": "happy_hour",
+    "venue": {
+      "id": "venue_zeitgeist",
+      "name": "Zeitgeist Beer Garden",
+      "address": "100 Heritage St, San Francisco, CA 94103",
+      "neighborhood": "Mission",
+      "phone": "(415) 255-7505",
+      "website": "https://zeitgeistbeer.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "16:00",
+      "end_time": "19:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Beer garden happy hour with $1 off all beers and free pretzels",
+      "price": "$0 entry",
+      "specials": [
+        "Domestic beer - $4",
+        "Craft beer - $5",
+        "Free pretzels",
+        "Bratwurst - $8"
+      ],
+      "capacity": 300,
+      "age_requirement": "21+",
+      "featured": true
+    },
+    "contact": {
+      "instagram": "@zeitgeistbeer"
+    },
+    "ratings": {
+      "google": 4.4,
+      "yelp": 4.3
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "happy_hour_south_beach_friday",
+    "name": "South Beach Brewing Happy Hour",
+    "category": "happy_hour",
+    "venue": {
+      "id": "venue_south_beach",
+      "name": "South Beach Brewing Company",
+      "address": "1875 The Alameda, San Francisco, CA 94103",
+      "neighborhood": "SoMa",
+      "phone": "(415) 227-0487",
+      "website": "https://southbeachbrewing.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "15:00",
+      "end_time": "18:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Early Friday happy hour with $2 off pints and wings specials",
+      "price": "$0 entry",
+      "specials": [
+        "Pint - $4",
+        "Wings - $0.50 each",
+        "Nachos - $8"
+      ],
+      "capacity": 150,
+      "age_requirement": "21+",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@southbeachbrewing"
+    },
+    "ratings": {
+      "google": 4.2,
+      "yelp": 4.1
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  },
+  {
+    "id": "happy_hour_el_jardin_friday",
+    "name": "El Jardin Friday Night Margaritas",
+    "category": "happy_hour",
+    "venue": {
+      "id": "venue_el_jardin",
+      "name": "El Jardin",
+      "address": "250 Columbus Ave, San Francisco, CA 94133",
+      "neighborhood": "North Beach",
+      "phone": "(415) 421-3550",
+      "website": "https://eljardinsf.com",
+      "type": "bar"
+    },
+    "schedule": {
+      "day_of_week": "Friday",
+      "start_time": "17:00",
+      "end_time": "20:00",
+      "recurring": true,
+      "exceptions": []
+    },
+    "details": {
+      "description": "Friday night margarita specials with tequila flights available",
+      "price": "$0 entry",
+      "specials": [
+        "Margarita - $6",
+        "Tequila flight - $12",
+        "Fish tacos - $5",
+        "Guacamole - $8"
+      ],
+      "capacity": 120,
+      "age_requirement": "21+",
+      "featured": false
+    },
+    "contact": {
+      "instagram": "@eljardin"
+    },
+    "ratings": {
+      "google": 4.3,
+      "yelp": 4.2
+    },
+    "last_updated": "2025-11-07T12:00:00Z"
+  }
+]
